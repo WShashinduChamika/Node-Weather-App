@@ -61,6 +61,7 @@ app.get("/weather",(req,res)=>{
     }
     
     const address = req.query.address
+    //console.log(address)
 
     geocode.getCoordinates(address,(error,{latitude,longitude, location}={})=>{
         if(error){
@@ -100,6 +101,6 @@ app.get("*", (req,res)=>{
     })
 })
 
-app.listen(3001, ()=>{
-    console.log("Server is running on port 3001")
+app.listen(3006, ()=>{
+    console.log("Server is running on port 3006")
 })
